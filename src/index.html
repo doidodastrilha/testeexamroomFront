@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      background-color: #ffffff; /* Cor de fundo padrão */
+    }
+  </style>
+  <script>
+    // Obtém a cor de fundo preferida do sistema
+    const systemBackground = window.matchMedia('(prefers-color-scheme: dark)').matches ? '#000000' : '#ffffff';
+
+    // Aplica a cor de fundo do sistema ao elemento body
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.style.backgroundColor = systemBackground;
+    });
+  </script>
+  <meta charset="utf-8">
+  <title>Testeexamroom</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="logoblack.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography">
+  <app-root ></app-root>
+</body>
+</html>

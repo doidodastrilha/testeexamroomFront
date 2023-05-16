@@ -1,0 +1,22 @@
+
+
+<div class="main-container" [themeBackground]="selectedTheme" >
+<h2>List</h2>
+    <div class="table-container"  >
+
+            
+        <table class="table-info" [themeBackground]="selectedTheme"  *ngIf="(informations$ | async) as informationsSlice" >
+                <tr >
+                    <th  *ngFor="let column of displayedColumns">{{column}}</th>
+                </tr>
+                <tr *ngFor="let information of informationsSlice.data">
+                    <td >{{information.Name}}</td>
+                    <td >{{information.Email}}</td>
+                    <td >{{information.Telephone}}</td>
+                    <td >{{information.UpdateDate}}</td>
+                </tr>
+              
+            </table>
+       
+    </div>
+</div>
